@@ -12,7 +12,25 @@
 		9A318E80211E309B005BE465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A318E7E211E309B005BE465 /* Main.storyboard */; };
 		9A318E82211E309C005BE465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A318E81211E309C005BE465 /* Assets.xcassets */; };
 		9A318E85211E309C005BE465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A318E83211E309C005BE465 /* LaunchScreen.storyboard */; };
+		9A318EB0211E32EA005BE465 /* DynamicForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A318EAF211E32C7005BE465 /* DynamicForm.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A318EAE211E32C7005BE465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A318EA2211E3287005BE465 /* DynamicForm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A318E97211E3286005BE465;
+			remoteInfo = DynamicForm;
+		};
+		9A318EB1211E32FE005BE465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A318EA2211E3287005BE465 /* DynamicForm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A318E96211E3286005BE465;
+			remoteInfo = DynamicForm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9A318E77211E309B005BE465 /* DynamicFormApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicFormApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +40,8 @@
 		9A318E81211E309C005BE465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A318E84211E309C005BE465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A318E86211E309C005BE465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A318E8C211E30FB005BE465 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9A318EA2211E3287005BE465 /* DynamicForm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DynamicForm.xcodeproj; path = ../DynamicForm/DynamicForm.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A318EB0211E32EA005BE465 /* DynamicForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +59,8 @@
 		9A318E6E211E309B005BE465 = {
 			isa = PBXGroup;
 			children = (
+				9A318EAA211E32C0005BE465 /* Frameworks */,
+				9A318E8C211E30FB005BE465 /* Playground.playground */,
 				9A318E79211E309B005BE465 /* DynamicFormApplication */,
 				9A318E78211E309B005BE465 /* Products */,
 			);
@@ -64,6 +87,22 @@
 			path = DynamicFormApplication;
 			sourceTree = "<group>";
 		};
+		9A318EAA211E32C0005BE465 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A318EA2211E3287005BE465 /* DynamicForm.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A318EAB211E32C7005BE465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A318EAF211E32C7005BE465 /* DynamicForm.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +117,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A318EB2211E32FE005BE465 /* PBXTargetDependency */,
 			);
 			name = DynamicFormApplication;
 			productName = DynamicFormApplication;
@@ -110,12 +150,28 @@
 			mainGroup = 9A318E6E211E309B005BE465;
 			productRefGroup = 9A318E78211E309B005BE465 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9A318EAB211E32C7005BE465 /* Products */;
+					ProjectRef = 9A318EA2211E3287005BE465 /* DynamicForm.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9A318E76211E309B005BE465 /* DynamicFormApplication */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9A318EAF211E32C7005BE465 /* DynamicForm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DynamicForm.framework;
+			remoteRef = 9A318EAE211E32C7005BE465 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9A318E75211E309B005BE465 /* Resources */ = {
@@ -141,6 +197,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A318EB2211E32FE005BE465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicForm;
+			targetProxy = 9A318EB1211E32FE005BE465 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A318E7E211E309B005BE465 /* Main.storyboard */ = {

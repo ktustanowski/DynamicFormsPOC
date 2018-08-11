@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A06BD5B211E46EA00FFFDD2 /* FormModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06BD5A211E46EA00FFFDD2 /* FormModels.swift */; };
+		9A06BD5E211E4A5700FFFDD2 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06BD5D211E4A5700FFFDD2 /* LabelTableViewCell.swift */; };
+		9A06BD60211E4A9000FFFDD2 /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A06BD5F211E4A9000FFFDD2 /* LabelTableViewCell.xib */; };
+		9A06BD63211E4B4F00FFFDD2 /* UITableViewCell+Management.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06BD62211E4B4F00FFFDD2 /* UITableViewCell+Management.swift */; };
+		9A0B2522211E4EFA00D09DED /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B2521211E4EFA00D09DED /* InputTableViewCell.swift */; };
+		9A0B2524211E4F3900D09DED /* InputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B2523211E4F3900D09DED /* InputTableViewCell.xib */; };
+		9A1AE653211E59D6003C92C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1AE652211E59D6003C92C6 /* Main.storyboard */; };
+		9A1AE655211E5A6A003C92C6 /* StoryboardMakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */; };
+		9A318E9C211E3287005BE465 /* DynamicForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A318E9A211E3286005BE465 /* DynamicForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A318EB4211E44B4005BE465 /* DynamicFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A318EB3211E44B4005BE465 /* DynamicFormViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A06BD5A211E46EA00FFFDD2 /* FormModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModels.swift; sourceTree = "<group>"; };
+		9A06BD5D211E4A5700FFFDD2 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		9A06BD5F211E4A9000FFFDD2 /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
+		9A06BD62211E4B4F00FFFDD2 /* UITableViewCell+Management.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Management.swift"; sourceTree = "<group>"; };
+		9A0B2521211E4EFA00D09DED /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		9A0B2523211E4F3900D09DED /* InputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTableViewCell.xib; sourceTree = "<group>"; };
+		9A1AE652211E59D6003C92C6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardMakeable.swift; sourceTree = "<group>"; };
+		9A318E97211E3286005BE465 /* DynamicForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A318E9A211E3286005BE465 /* DynamicForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicForm.h; sourceTree = "<group>"; };
+		9A318E9B211E3287005BE465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A318EB3211E44B4005BE465 /* DynamicFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A318E93211E3286005BE465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A06BD5C211E4A1700FFFDD2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9A06BD5D211E4A5700FFFDD2 /* LabelTableViewCell.swift */,
+				9A06BD5F211E4A9000FFFDD2 /* LabelTableViewCell.xib */,
+				9A0B2521211E4EFA00D09DED /* InputTableViewCell.swift */,
+				9A0B2523211E4F3900D09DED /* InputTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9A06BD61211E4B2C00FFFDD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A06BD62211E4B4F00FFFDD2 /* UITableViewCell+Management.swift */,
+				9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9A318E8D211E3286005BE465 = {
+			isa = PBXGroup;
+			children = (
+				9A1AE652211E59D6003C92C6 /* Main.storyboard */,
+				9A06BD61211E4B2C00FFFDD2 /* Extensions */,
+				9A06BD5C211E4A1700FFFDD2 /* Cells */,
+				9A06BD5A211E46EA00FFFDD2 /* FormModels.swift */,
+				9A318EB3211E44B4005BE465 /* DynamicFormViewController.swift */,
+				9A318E99211E3286005BE465 /* DynamicForm */,
+				9A318E98211E3286005BE465 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A318E98211E3286005BE465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A318E97211E3286005BE465 /* DynamicForm.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A318E99211E3286005BE465 /* DynamicForm */ = {
+			isa = PBXGroup;
+			children = (
+				9A318E9A211E3286005BE465 /* DynamicForm.h */,
+				9A318E9B211E3287005BE465 /* Info.plist */,
+			);
+			path = DynamicForm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9A318E94211E3286005BE465 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A318E9C211E3287005BE465 /* DynamicForm.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9A318E96211E3286005BE465 /* DynamicForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A318E9F211E3287005BE465 /* Build configuration list for PBXNativeTarget "DynamicForm" */;
+			buildPhases = (
+				9A318E92211E3286005BE465 /* Sources */,
+				9A318E93211E3286005BE465 /* Frameworks */,
+				9A318E94211E3286005BE465 /* Headers */,
+				9A318E95211E3286005BE465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicForm;
+			productName = DynamicForm;
+			productReference = 9A318E97211E3286005BE465 /* DynamicForm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A318E8E211E3286005BE465 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Cornerbit Kamil Tustanowski";
+				TargetAttributes = {
+					9A318E96211E3286005BE465 = {
+						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = 9A318E91211E3286005BE465 /* Build configuration list for PBXProject "DynamicForm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A318E8D211E3286005BE465;
+			productRefGroup = 9A318E98211E3286005BE465 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A318E96211E3286005BE465 /* DynamicForm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A318E95211E3286005BE465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1AE653211E59D6003C92C6 /* Main.storyboard in Resources */,
+				9A0B2524211E4F3900D09DED /* InputTableViewCell.xib in Resources */,
+				9A06BD60211E4A9000FFFDD2 /* LabelTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A318E92211E3286005BE465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1AE655211E5A6A003C92C6 /* StoryboardMakeable.swift in Sources */,
+				9A0B2522211E4EFA00D09DED /* InputTableViewCell.swift in Sources */,
+				9A06BD63211E4B4F00FFFDD2 /* UITableViewCell+Management.swift in Sources */,
+				9A06BD5B211E46EA00FFFDD2 /* FormModels.swift in Sources */,
+				9A318EB4211E44B4005BE465 /* DynamicFormViewController.swift in Sources */,
+				9A06BD5E211E4A5700FFFDD2 /* LabelTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9A318E9D211E3287005BE465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A318E9E211E3287005BE465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A318EA0211E3287005BE465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S288FYNY7S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DynamicForm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cornerbit.kamil.tustanowski.DynamicForm;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A318EA1211E3287005BE465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S288FYNY7S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DynamicForm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cornerbit.kamil.tustanowski.DynamicForm;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A318E91211E3286005BE465 /* Build configuration list for PBXProject "DynamicForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A318E9D211E3287005BE465 /* Debug */,
+				9A318E9E211E3287005BE465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A318E9F211E3287005BE465 /* Build configuration list for PBXNativeTarget "DynamicForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A318EA0211E3287005BE465 /* Debug */,
+				9A318EA1211E3287005BE465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A318E8E211E3286005BE465 /* Project object */;
+}
