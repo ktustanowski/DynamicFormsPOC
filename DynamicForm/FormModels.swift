@@ -8,12 +8,31 @@
 
 import Foundation
 
-public protocol FormField {
-    var id: String { get }
+public enum InputType: String, Codable {
+    case string // => text field
+    case longString // => text view
+    case int // => text field
+    case double // => text field
+    case bool // => switch
+    case none
+    case unsupported
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.singleValueContainer()
+        self = try InputType(rawValue: values.decode(String.self)) ?? .unsupported
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.rawValue)
+    }
 }
 
-public protocol Describable {
-    var descriptionText: String? { get }
+public protocol FormFieldProtocol {
+    var id: String { get }
+    var displayText: String? { get }
+    var inputType: InputType { get }
+    var placeholder: String? { get }
 }
 
 public protocol Stylable {
@@ -23,24 +42,4 @@ public protocol Stylable {
     
     var foregroundColor: UIColor? { get }
     var backgroundColor: UIColor? { get }
-}
-
-public protocol Text: FormField, Describable {
-    var value: String? { get }
-}
-
-public protocol InputText: FormField, Describable {
-    
-}
-
-public protocol InputInt: FormField, Describable {
-    
-}
-
-public protocol InputDouble: FormField, Describable {
-    
-}
-
-public protocol CalculatedText: FormField, Describable {
-    
 }

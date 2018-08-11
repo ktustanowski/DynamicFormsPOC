@@ -8,21 +8,10 @@
 
 import Foundation
 
-struct TextInfo: Text {
-    var id: String
-    var value: String?
-    var descriptionText: String?
-}
-
-struct InputTextInfo: InputText {
-    var id: String
-    var descriptionText: String?
-}
-
 public protocol DynamicFormViewModelProtocol {
     var fieldCount: Int { get }
-    func field(at indexPath: IndexPath) -> FormField
-    func add(fields: [FormField])
+    func field(at indexPath: IndexPath) -> FormFieldProtocol
+    func add(fields: [FormFieldProtocol])
 }
 
 public class DynamicFormViewController: UITableViewController, StoryboardMakeable {
@@ -38,17 +27,47 @@ public class DynamicFormViewController: UITableViewController, StoryboardMakeabl
         registerCells()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50
-//        injectFakeData()//TODO: REMOVE
+        
+        let formJsonString =
+        """
+[
+    {
+        "id": "1",
+        "displayText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+        "inputType": "none"
+    },
+    {
+        "id": "2",
+        "displayText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+        "inputType": "string",
+        "placeholder": "Sed ut perspiciatis unde"
+    },
+    {
+        "id": "3",
+        "displayText": "Input int",
+        "inputType": "int"
+    },
+    {
+        "id": "4",
+        "displayText": "Input double",
+        "inputType": "double"
     }
-    
-    /// TODO: REMOVE
-    private func injectFakeData() {
-        let text = TextInfo(id: "t1", value: "Just some random text...", descriptionText: nil)
-        let inputText = InputTextInfo(id: "it1", descriptionText: "Please input something 🙏")
+
+]
+"""
         
+        struct FormField: FormFieldProtocol, Codable {
+            let id: String
+            let displayText: String?
+            let inputType: InputType
+            let placeholder: String?
+        }
         
-        viewModel.add(fields: [text, inputText])
-        tableView.reloadData()
+        var formProvider = FormProvider<FormField>()
+        formProvider.formJsonString = formJsonString
+        let fields = formProvider.loadForm() ?? []
+        
+        viewModel.add(fields: fields)
     }
     
     private func registerCells() {
@@ -62,16 +81,27 @@ public class DynamicFormViewController: UITableViewController, StoryboardMakeabl
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell //TODO: make cell handling more elegant
-        if let field = viewModel.field(at: indexPath) as? Text {
-            cell = tableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.reuseIdentifier,
-                                                 for: indexPath)
-            (cell as? LabelTableViewCell)?.label.text = field.value
-        } else if let field = viewModel.field(at: indexPath) as? InputText {
+        let field = viewModel.field(at: indexPath)
+        switch field.inputType {
+        case .int, .string, .double:
             cell = tableView.dequeueReusableCell(withIdentifier: InputTableViewCell.reuseIdentifier,
                                                  for: indexPath)
-            (cell as? InputTableViewCell)?.topLabel.text = field.descriptionText
-        } else {
-            fatalError("No cell found!")
+            (cell as? InputTableViewCell)?.topLabel.text = field.displayText
+            (cell as? InputTableViewCell)?.bottomTextField.placeholder = field.placeholder
+            switch field.inputType {
+            case .int:
+                (cell as? InputTableViewCell)?.bottomTextField.keyboardType = .numberPad
+            case .double:
+                (cell as? InputTableViewCell)?.bottomTextField.keyboardType = .decimalPad
+            default:
+                break
+            }
+        case .none, .unsupported:
+            cell = tableView.dequeueReusableCell(withIdentifier: LabelTableViewCell.reuseIdentifier,
+                                                 for: indexPath)
+            (cell as? LabelTableViewCell)?.label.text = field.displayText
+        default:
+            fatalError("No suitable cell found!")
         }
 
         return cell
@@ -79,17 +109,17 @@ public class DynamicFormViewController: UITableViewController, StoryboardMakeabl
 }
 
 class DynamicFormViewModel: DynamicFormViewModelProtocol {
-    var fields: [FormField] = []
+    var fields: [FormFieldProtocol] = []
     
     var fieldCount: Int {
         return fields.count
     }
     
-    func field(at indexPath: IndexPath) -> FormField {
+    func field(at indexPath: IndexPath) -> FormFieldProtocol {
         return fields[indexPath.row] //TODO: make safe
     }
     
-    func add(fields: [FormField]) {
+    func add(fields: [FormFieldProtocol]) {
         self.fields += fields
     }
 }
