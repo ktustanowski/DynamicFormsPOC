@@ -9,11 +9,11 @@
 import Foundation
 
 public enum InputType: String, Codable {
-    case string // => text field
-    case longString // => text view
-    case numeric // => text field
-    case bool // => switch
-    case none // => label
+    case string
+    case longString
+    case numeric
+    case bool
+    case none
     case unsupported
     
     public init(from decoder: Decoder) throws {

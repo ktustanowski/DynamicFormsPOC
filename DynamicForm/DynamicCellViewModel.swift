@@ -53,11 +53,9 @@ private extension DynamicFormViewModel {
     }
 
     func performCalculations(for field: FormFieldProtocol) {
-        print("Trying to perform calculations for \(String(describing: field.displayText))")
         guard let calculationDependencies = dependencies[field.id],
             calculationDependencies.filter({ $0.value != nil }).count == dependencies[field.id]?.count
         else {
-            print("Insufficient data!")
             return }
 
         updateDisplayText(for: field, text: "Calculating...") //TODO: spinner would be nicer 

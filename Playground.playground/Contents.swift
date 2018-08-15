@@ -1,9 +1,43 @@
-//: Playground - noun: a place where people can play
-
 import Foundation
 import UIKit
 import PlaygroundSupport
 import DynamicForm
+
+class FormField: FormFieldProtocol, Codable {
+    let id: String
+    var displayText: String?
+    let inputType: InputType
+    let placeholder: String?
+    
+    let fontStyle: String?
+    let fontSize: Float?
+    let foregroundColorString: String?
+    let backgroundColorString: String?
+    
+    let dependsOn: [String]?
+    let actionUrl: String?
+    
+    var value: String? {
+        didSet {
+            valueDidChange?()
+        }
+    }
+    var valueDidChange: (() -> Void)?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case displayText
+        case inputType
+        case placeholder
+        case fontStyle
+        case fontSize
+        case foregroundColorString
+        case backgroundColorString
+        case dependsOn
+        case actionUrl
+        case value
+    }
+}
 
 let formJsonString =
 """
@@ -20,11 +54,11 @@ let formJsonString =
         "inputType": "none"
     },
     {
-        "id": "3",
-        "displayText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-        "inputType": "string",
-        "placeholder": "Sed ut perspiciatis unde",
-        "foregroundColorString": "#dc143c"
+    "id": "3",
+    "displayText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "inputType": "string",
+    "placeholder": "Sed ut perspiciatis unde",
+    "foregroundColorString": "#ff0000"
     },
     {
         "id": "4",
@@ -60,46 +94,13 @@ let formJsonString =
 ]
 """
 
-class FormField: FormFieldProtocol, Codable {
-    let id: String
-    var displayText: String?
-    let inputType: InputType
-    let placeholder: String?
-    
-    let fontStyle: String?
-    let fontSize: Float?
-    let foregroundColorString: String?
-    let backgroundColorString: String?
-    
-    let dependsOn: [String]?
-    let actionUrl: String?
-    
-    var value: String? {
-        didSet {
-            valueDidChange?()
-        }
-    }
-    var valueDidChange: (() -> Void)?
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case displayText
-        case inputType
-        case placeholder
-        case fontStyle
-        case fontSize
-        case foregroundColorString
-        case backgroundColorString
-        case dependsOn
-        case actionUrl
-        case value        
-    }
-}
-
 struct ApiCalculator: CalculatorProtocol {
     func calculate(_ fields: [FormFieldProtocol], at url: String?, completion: @escaping (String) -> Void) {
         //let's just pretend here we make API call to get result for given fields
-        let calculationsOutcomeReturnedByApi = fields.reduce(0, { current, next in current + Int(next.value ?? "0")!})
+        let calculationsOutcomeReturnedByApi = fields
+            .reduce(0, { current, next in
+            current - Int(next.value ?? "0")!
+        })
         completion(String(describing: calculationsOutcomeReturnedByApi))
     }
 }

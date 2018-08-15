@@ -64,7 +64,6 @@ public class DynamicFormViewController: UITableViewController, StoryboardMakeabl
             
             if let fontSize = field.fontSize { cell.bottomTextField.font = cell.bottomTextField.font?.withSize(CGFloat(fontSize)) }
             if let fontSize = field.fontSize { cell.topLabel.font = cell.topLabel.font?.withSize(CGFloat(fontSize)) }
-            if let foregroundColorString = field.foregroundColorString { cell.bottomTextField.textColor = UIColor(rgba: foregroundColorString) }
             if let foregroundColorString = field.foregroundColorString { cell.topLabel.textColor = UIColor(rgba: foregroundColorString) }
             if let backgroundColorString = field.backgroundColorString { cell.contentView.backgroundColor = UIColor(rgba: backgroundColorString) }
             
