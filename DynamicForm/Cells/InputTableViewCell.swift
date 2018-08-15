@@ -11,4 +11,16 @@ import Foundation
 class InputTableViewCell: UITableViewCell {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var bottomTextField: UITextField!
+    var inputDidChange: ((String?) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        bottomTextField.delegate = self        
+    }
+}
+
+extension InputTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        inputDidChange?(textField.text)
+    }
 }

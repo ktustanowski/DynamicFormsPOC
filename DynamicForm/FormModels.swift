@@ -11,10 +11,9 @@ import Foundation
 public enum InputType: String, Codable {
     case string // => text field
     case longString // => text view
-    case int // => text field
-    case double // => text field
+    case numeric // => text field
     case bool // => switch
-    case none
+    case none // => label
     case unsupported
     
     public init(from decoder: Decoder) throws {
@@ -28,18 +27,25 @@ public enum InputType: String, Codable {
     }
 }
 
-public protocol FormFieldProtocol {
+public protocol FormFieldProtocol: class, Stylable, Actionable {
     var id: String { get }
-    var displayText: String? { get }
+    var displayText: String? { get set }
     var inputType: InputType { get }
     var placeholder: String? { get }
+    
+    var value: String? { get set }
+    var valueDidChange: (() -> Void)? { get set }
 }
 
 public protocol Stylable {
-    var fontName: String? { get }
     var fontStyle: String? { get }
-    var fontSize: Int? { get }
+    var fontSize: Float? { get }
     
-    var foregroundColor: UIColor? { get }
-    var backgroundColor: UIColor? { get }
+    var foregroundColorString: String? { get }
+    var backgroundColorString: String? { get }
+}
+
+public protocol Actionable {
+    var dependsOn: [String]? { get }
+    var actionUrl: String? { get }
 }

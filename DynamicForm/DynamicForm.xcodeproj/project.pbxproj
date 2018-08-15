@@ -15,6 +15,8 @@
 		9A0B2524211E4F3900D09DED /* InputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B2523211E4F3900D09DED /* InputTableViewCell.xib */; };
 		9A1AE653211E59D6003C92C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1AE652211E59D6003C92C6 /* Main.storyboard */; };
 		9A1AE655211E5A6A003C92C6 /* StoryboardMakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */; };
+		9A1EA183211F4D1300DA65DF /* UIColor+HexToRgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EA182211F4D1300DA65DF /* UIColor+HexToRgb.swift */; };
+		9A1EA185211F4E6700DA65DF /* DynamicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EA184211F4E6700DA65DF /* DynamicCellViewModel.swift */; };
 		9A318E9C211E3287005BE465 /* DynamicForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A318E9A211E3286005BE465 /* DynamicForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A318EB4211E44B4005BE465 /* DynamicFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A318EB3211E44B4005BE465 /* DynamicFormViewController.swift */; };
 		9ABB425D211EE6C7008F14AE /* FormProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB425C211EE6C7008F14AE /* FormProvider.swift */; };
@@ -29,6 +31,8 @@
 		9A0B2523211E4F3900D09DED /* InputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTableViewCell.xib; sourceTree = "<group>"; };
 		9A1AE652211E59D6003C92C6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardMakeable.swift; sourceTree = "<group>"; };
+		9A1EA182211F4D1300DA65DF /* UIColor+HexToRgb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexToRgb.swift"; sourceTree = "<group>"; };
+		9A1EA184211F4E6700DA65DF /* DynamicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCellViewModel.swift; sourceTree = "<group>"; };
 		9A318E97211E3286005BE465 /* DynamicForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A318E9A211E3286005BE465 /* DynamicForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicForm.h; sourceTree = "<group>"; };
 		9A318E9B211E3287005BE465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			children = (
 				9A06BD62211E4B4F00FFFDD2 /* UITableViewCell+Management.swift */,
 				9A1AE654211E5A6A003C92C6 /* StoryboardMakeable.swift */,
+				9A1EA182211F4D1300DA65DF /* UIColor+HexToRgb.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -76,6 +81,7 @@
 				9A06BD5C211E4A1700FFFDD2 /* Cells */,
 				9A06BD5A211E46EA00FFFDD2 /* FormModels.swift */,
 				9A318EB3211E44B4005BE465 /* DynamicFormViewController.swift */,
+				9A1EA184211F4E6700DA65DF /* DynamicCellViewModel.swift */,
 				9A318E99211E3286005BE465 /* DynamicForm */,
 				9A318E98211E3286005BE465 /* Products */,
 			);
@@ -182,8 +188,10 @@
 			files = (
 				9A1AE655211E5A6A003C92C6 /* StoryboardMakeable.swift in Sources */,
 				9A0B2522211E4EFA00D09DED /* InputTableViewCell.swift in Sources */,
+				9A1EA185211F4E6700DA65DF /* DynamicCellViewModel.swift in Sources */,
 				9A06BD63211E4B4F00FFFDD2 /* UITableViewCell+Management.swift in Sources */,
 				9A06BD5B211E46EA00FFFDD2 /* FormModels.swift in Sources */,
+				9A1EA183211F4D1300DA65DF /* UIColor+HexToRgb.swift in Sources */,
 				9A318EB4211E44B4005BE465 /* DynamicFormViewController.swift in Sources */,
 				9A06BD5E211E4A5700FFFDD2 /* LabelTableViewCell.swift in Sources */,
 				9ABB425D211EE6C7008F14AE /* FormProvider.swift in Sources */,
