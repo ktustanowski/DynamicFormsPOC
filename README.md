@@ -6,7 +6,7 @@ If you need to:
 Heare are some ideas you can use.
 
 ## General
-This repository contains framework which handles showing and processing dynamic form. Thanks to this it's easy to do a  playground-driven-programming. If you open the playground file in the project and configure other half of the screen to live view you will see how form changes in real time when you change fields json or APICalculator. 
+This repository contains framework which handles showing and processing dynamic form. Thanks to this it's easy to do a  playground-driven-programming. If you build the project and hen open playground file in the project and configure other half of the screen to live view you will see how form changes in real time when you json text or APICalculator. 
 Note: Keyboards in playgrounds look a bit wonky (don't fit the screen properly). This is a playground-only issue.
 
 ## Dynamic form cells
