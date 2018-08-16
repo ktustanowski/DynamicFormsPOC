@@ -93,4 +93,4 @@ struct ApiCalculator: CalculatorProtocol {
 ![Calculations #2](https://github.com/ktustanowski/DynamicFormsPOC/blob/master/Movies/addition.gif?raw=true)
 In the PoC I implemetnted only calculations but there can be a much more actions handled in the form i.e. showing or hiding fields based on input.
 
-This is just simple PoC and was done to check out a few ideas. This needs to be refactored to actually use in real world scenarios. Some of the stuff is also coupled and not moved to other classes to make the concepts clearly visible.
+This is just simple PoC and was done to check out a few ideas. Some of the stuff is also coupled and not moved to other classes to make the concepts clearly visible.
