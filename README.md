@@ -6,7 +6,8 @@ If you need to:
 Heare are some ideas you can use.
 
 ## General
-This repository contains framework which handles showing and processing dynamic form. Thanks to this it's easy to do a  playground-driven-programming. If you open the playground file in the project and configure other half of the screen to live view you will see how form changes in real time when you change fields json or APICalculator.
+This repository contains framework which handles showing and processing dynamic form. Thanks to this it's easy to do a  playground-driven-programming. If you open the playground file in the project and configure other half of the screen to live view you will see how form changes in real time when you change fields json or APICalculator. 
+Note: Keyboards in playgrounds look a bit wonky (don't fit the screen properly). This is a playground-only issue.
 
 ## Dynamic form cells
 This is pretty simple. Just load form fields from response from the API and based on them build concrete cells. 
@@ -50,6 +51,8 @@ public enum InputType: String, Codable {
 This is absent in PoC but based on this types different cells should be presented to the user. Cell with text field for numeric 
 but with text view for long string, or switch for bool input etc.
 
+![Styling form gif](https://github.com/ktustanowski/DynamicFormsPOC/blob/master/Movies/styled_form.gif?raw=true)
+
 ## Calculations
 Calculations can be performed locally or on the API. When done on the API calculation logic can be easily shared between i.e. iOS & Android. When done locally it either needs to be implemented on the app side or algorithms are loaded from the API. This requires to write calculation engine on every platform separately and also potentially exposes calculation algorithms since they needs to be passed along with other form data.
 The implementation of calculations in this PoC is based on few assumptions:
@@ -86,7 +89,8 @@ struct ApiCalculator: CalculatorProtocol {
     }
 }
 ```
-
+![Calculations #1](https://github.com/ktustanowski/DynamicFormsPOC/blob/master/Movies/substraction.gif?raw=true)
+![Calculations #2](https://github.com/ktustanowski/DynamicFormsPOC/blob/master/Movies/addition.gif?raw=true)
 In the PoC I implemetnted only calculations but there can be a much more actions handled in the form i.e. showing or hiding fields based on input.
 
 This is just simple PoC and was done to check out a few ideas. This needs to be refactored to actually use in real world scenarios. Some of the stuff is also coupled and not moved to other classes to make the concepts clearly visible.
